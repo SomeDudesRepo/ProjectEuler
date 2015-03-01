@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 
+#include "xmlreader.h"
+
 namespace Ui {
 class MainWindow;
 }
@@ -20,6 +22,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    XmlReader mXmlReader;
 };
 
 #endif // MAINWINDOW_H

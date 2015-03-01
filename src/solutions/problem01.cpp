@@ -2,7 +2,11 @@
 
 #include <string>
 
-#include "log.h"
+#include <QFile>
+#include <QMessageBox>
+#include <QXmlStreamReader>
+
+#include "../log.h"
 
 namespace
 {
@@ -46,11 +50,11 @@ int CalculateSum(const int &a, const int &b, const int& limit)
 }  // namspace
 
 Problem01::Problem01(const int &a, const int &b, const int& limit)
-    :   mResult(CalculateSum(a, b, limit)) {}
+    :   BaseRunnable(CalculateSum(a, b, limit)) {}
 
-int Problem01::GetResult() const
-{
-    const std::string msg("Result for problem01: " + std::to_string(mResult));
-    Log(msg);
-    return mResult;
-}
+//int Problem01::GetResult() const
+//{
+//    const std::string msg("Result for problem01: " + std::to_string(mResult));
+//    Log(msg);
+//    return mResult;
+//}
