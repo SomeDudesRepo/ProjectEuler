@@ -1,11 +1,30 @@
 #include "mainwindow.h"
+
 #include <QApplication>
+
+#include "log.h"
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
+    int result(0);
+    try
+    {
+        QApplication a(argc, argv);
+        Log("App start");
+        MainWindow w;
+        w.show();
+        result = a.exec();
+    }
+    catch(const std::string& s)
+    {
+        result = 1;
+        Log("Exception: " + s);
+    }
+    catch(...)
+    {
+        result = 1;
+        Log("Exception: unknown");
+    }
 
-    return a.exec();
+    return result;
 }

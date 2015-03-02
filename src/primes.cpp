@@ -2,13 +2,19 @@
 
 #include "log.h"
 
-void GetNextPrime(std::vector<uint64_t>& primes)
+void GetNextPrime(std::vector<uint64_t>& primes, const int &limit)
 {
     for (uint64_t next(primes.back() + 2); ; next += 2)
     {
         bool found(true);
+//        const uint64_t root(static_cast<const uint64_t>(std::sqrt(next)));
         for (const auto& p : primes)
         {
+//            if (p > root)
+//            {
+//                found = false;
+//                break;
+//            }
             if (next % p == 0)
             {
                 found = false;
@@ -20,6 +26,8 @@ void GetNextPrime(std::vector<uint64_t>& primes)
             primes.push_back(next);
             break;
         }
+        if (limit != -1 && (next + 2) >= limit)
+            break;
     }
 }
 

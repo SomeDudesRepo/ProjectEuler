@@ -48,7 +48,7 @@ Problems XmlReader::GetAvailableProblems() const
     }
 
     if (reader.hasError())
-        throw "XML parse error: " + reader.errorString().toStdString();
+        throw std::string("XML parse error: " + reader.errorString().toStdString());
 
     reader.clear();
 //    mFile->close();
@@ -90,7 +90,7 @@ Parameters XmlReader::GetProblemParameters(const int& problemId) const
     }
 
     if (reader.hasError())
-        throw "XML parse error: " + reader.errorString().toStdString();
+        throw std::string("XML parse error: " + reader.errorString().toStdString());
 
     reader.clear();
 

@@ -16,30 +16,33 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     log.cpp \
     xmlreader.cpp \
-    solutions/problem02.cpp \
-    solutions/problem01.cpp \
-    solutions/problem03.cpp \
-    solutions/problem04.cpp \
-    solutions/problem05.cpp \
-    solutions/problem06.cpp \
-    solutions/problem07.cpp \
     primes.cpp \
-    solutions/problem08.cpp \
-    solutions/problem09.cpp
+    solutions/010/problem001.cpp \
+    solutions/010/problem002.cpp \
+    solutions/010/problem003.cpp \
+    solutions/010/problem004.cpp \
+    solutions/010/problem005.cpp \
+    solutions/010/problem006.cpp \
+    solutions/010/problem007.cpp \
+    solutions/010/problem008.cpp \
+    solutions/010/problem009.cpp \
+    solutions/010/problem010.cpp
 
 HEADERS  += mainwindow.h \
     log.h \
     xmlreader.h \
     baserunnable.h \
-    solutions/problem02.h \
-    solutions/problem01.h \
-    solutions/problem03.h \
-    solutions/problem04.h \
-    solutions/problem05.h \
-    solutions/problem06.h \
-    solutions/problem07.h \
     primes.h \
-    solutions/problem08.h \
-    solutions/problem09.h
+    solutions/problems.h \
+    solutions/010/problem001.h \
+    solutions/010/problem002.h \
+    solutions/010/problem003.h \
+    solutions/010/problem004.h \
+    solutions/010/problem005.h \
+    solutions/010/problem006.h \
+    solutions/010/problem007.h \
+    solutions/010/problem008.h \
+    solutions/010/problem009.h \
+    solutions/010/problem010.h
 
 FORMS    += mainwindow.ui

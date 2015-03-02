@@ -79,4 +79,12 @@
 		</description>
 		<parameters count="0"/>
 	</problem>
+	<problem id="10">
+		<description>
+			Finds the sum of primes under the limit.
+		</description>
+		<parameters count="1">
+			<parameter>2000000</parameter>
+		</parameters>
+	</problem>
 </euler_problems>

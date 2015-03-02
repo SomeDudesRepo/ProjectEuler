@@ -1,9 +1,8 @@
-#include "problem08.h"
+#include "problem008.h"
 
-#include <cassert>
 #include <string>
 
-#include "../log.h"
+#include "../../log.h"
 
 namespace
 {
@@ -44,5 +43,5 @@ uint64_t GetGreatestProduct(const std::string& series, const int& count)
 
 }  // namespace
 
-Problem08::Problem08(const std::string& series, const int& count)
+Problem008::Problem008(const std::string& series, const int& count)
     :   BaseRunnable(GetGreatestProduct(series, count)) {}

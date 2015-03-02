@@ -1,12 +1,8 @@
-#include "problem02.h"
+#include "problem002.h"
 
 #include <string>
 
-#include <QFile>
-#include <QMessageBox>
-#include <QXmlStreamReader>
-
-#include "../log.h"
+#include "../../log.h"
 
 namespace
 {
@@ -35,5 +31,5 @@ int CalculateSum(const int& limit)
 
 }  // namspace
 
-Problem02::Problem02(const int& limit)
+Problem002::Problem002(const int& limit)
     :   BaseRunnable(CalculateSum(limit)) {}

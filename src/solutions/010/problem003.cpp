@@ -1,18 +1,14 @@
-#include "problem03.h"
+#include "problem003.h"
 
 #include <string>
 
-#include <QFile>
-#include <QMessageBox>
-#include <QXmlStreamReader>
-
-#include "../log.h"
-#include "../primes.h"
+#include "../../log.h"
+#include "../../primes.h"
 
 namespace
 {
 
-int CalculateMaxPrimeFactor(const uint64_t& number)
+uint64_t CalculateMaxPrimeFactor(const uint64_t& number)
 {
     Log("Start");
     std::vector<uint64_t> primes(gPrimes, gPrimes + sizeof gPrimes / sizeof gPrimes[0]);
@@ -42,5 +38,5 @@ int CalculateMaxPrimeFactor(const uint64_t& number)
 
 }  // namspace
 
-Problem03::Problem03(const uint64_t& number)
+Problem003::Problem003(const uint64_t& number)
     :   BaseRunnable(CalculateMaxPrimeFactor(number)) {}

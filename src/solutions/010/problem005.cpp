@@ -1,13 +1,8 @@
-#include "problem05.h"
+#include "problem005.h"
 
-#include <cassert>
 #include <string>
 
-#include <QFile>
-#include <QMessageBox>
-#include <QXmlStreamReader>
-
-#include "../log.h"
+#include "../../log.h"
 
 namespace
 {
@@ -33,5 +28,5 @@ int CalculateSmallestMultiple(const int& min, const int& max)
 
 }  // namspace
 
-Problem05::Problem05(const int& min, const int& max)
+Problem005::Problem005(const int& min, const int& max)
     :   BaseRunnable(CalculateSmallestMultiple(min, max)) {}

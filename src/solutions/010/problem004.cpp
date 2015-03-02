@@ -1,13 +1,9 @@
-#include "problem04.h"
+#include "problem004.h"
 
 #include <cassert>
 #include <string>
 
-#include <QFile>
-#include <QMessageBox>
-#include <QXmlStreamReader>
-
-#include "../log.h"
+#include "../../log.h"
 
 namespace
 {
@@ -46,5 +42,5 @@ int CalculateLargestPalindrome(const int& min, const int& max)
 
 }  // namspace
 
-Problem04::Problem04(const int& min, const int& max)
+Problem004::Problem004(const int& min, const int& max)
     :   BaseRunnable(CalculateLargestPalindrome(min, max)) {}

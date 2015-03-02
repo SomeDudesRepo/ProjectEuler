@@ -1,20 +1,15 @@
-#include "problem06.h"
+#include "problem006.h"
 
-#include <cassert>
 #include <string>
 
-#include <QFile>
-#include <QMessageBox>
-#include <QXmlStreamReader>
-
-#include "../log.h"
+#include "../../log.h"
 
 namespace
 {
 
 int GetSquareSum(const int& n)
 {
-    const int square(std::pow(n, 2));
+    const int square(static_cast<const int>(std::pow(n, 2)));
     return square * (square + (2 * n) + 1) / 4;
 }
 
@@ -28,7 +23,7 @@ int GetSumOfSquares(const int& n)
         return n;
     int sum(0);
     for (int i(1); i <= n; ++i)
-        sum += std::pow(i, 2);
+        sum += static_cast<int>(std::pow(i, 2));
     return sum;
 }
 
@@ -47,5 +42,5 @@ int CalculateDifference(const int& min, const int& max)
 
 }  // namspace
 
-Problem06::Problem06(const int& min, const int& max)
+Problem006::Problem006(const int& min, const int& max)
     :   BaseRunnable(CalculateDifference(min - 1, max)) {}
