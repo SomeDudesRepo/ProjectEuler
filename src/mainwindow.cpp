@@ -43,6 +43,10 @@ void MainWindow::on_mBtnRun_clicked()
             case 8: base.reset(new Problem008(params[1], std::stoi(params[0]))); break;
             case 9: base.reset(new Problem009); break;
             case 10: base.reset(new Problem010(std::stoull(params[0]))); break;
+            case 11: base.reset(new Problem011(std::stoi(params[0]),
+                                               std::stoi(params[1]),
+                                               params[2]));
+                    break;
             default: throw std::string("No other cases yet!");
         }
         ui->mLnResult->setText(QString::number(base->GetResult()));

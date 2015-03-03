@@ -12,4 +12,6 @@
 #include "solutions/010/problem009.h"
 #include "solutions/010/problem010.h"
 
+#include "solutions/020/problem011.h"
+
 #endif // PROBLEMS

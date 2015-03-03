@@ -26,7 +26,8 @@ SOURCES += main.cpp\
     solutions/010/problem007.cpp \
     solutions/010/problem008.cpp \
     solutions/010/problem009.cpp \
-    solutions/010/problem010.cpp
+    solutions/010/problem010.cpp \
+    solutions/020/problem011.cpp
 
 HEADERS  += mainwindow.h \
     log.h \
@@ -43,6 +44,7 @@ HEADERS  += mainwindow.h \
     solutions/010/problem007.h \
     solutions/010/problem008.h \
     solutions/010/problem009.h \
-    solutions/010/problem010.h
+    solutions/010/problem010.h \
+    solutions/020/problem011.h
 
 FORMS    += mainwindow.ui

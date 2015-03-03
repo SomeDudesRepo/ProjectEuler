@@ -1,6 +1,10 @@
 Corpus Analyser
 ---------------
 
+V 0.3.1
+-------
+- Problems 11 partial.
+
 V 0.3.0
 -------
 - Problems 9 & 10. 10 is super slow. Prime number generation needs speed.

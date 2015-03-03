@@ -11,4 +11,4 @@ public:
     Problem010(const int& limit);
 };
 
-#endif // PROBLEM09_H
+#endif // PROBLEM010_H

@@ -10,7 +10,9 @@ namespace
 
 uint64_t GetSumOfPrimesUnderLimit(const int& limit)
 {
-    std::vector<uint64_t> primes{2, 3};
+    std::vector<uint64_t> primes;
+    primes.push_back(2);
+    primes.push_back(3);
     uint64_t sum(2);
     size_t pSize(1), cSize(primes.size());
     while (cSize != pSize)
