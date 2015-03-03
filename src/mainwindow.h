@@ -1,6 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <string>
+
 #include <QMainWindow>
 
 #include "xmlreader.h"
@@ -22,6 +24,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    const std::string mAppPath;
     XmlReader mXmlReader;
 };
 

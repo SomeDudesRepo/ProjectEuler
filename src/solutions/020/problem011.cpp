@@ -6,7 +6,6 @@
 #include <vector>
 
 #include "../../log.h"
-#include "../../primes.h"
 
 namespace
 {
@@ -39,42 +38,48 @@ Grid GetGrid(const int& n, const std::string& array)
 
 uint64_t ProcessSubGrid(const Grid& grid, const int& x, const int& y, const int& m)
 {
-    std::vector<uint64_t> results(10, 0);
+    std::vector<uint64_t> nums(m, 1);
+    uint64_t vTemp(1),hTemp(1);
     for (int i(0); i < m; ++i)
     {
+        hTemp = 1;
+        vTemp = 1;
         for (int j(0); j < m; ++j)
         {
-
+            hTemp *= grid[x + i][y + j];
+            vTemp *= grid[y + j][x + i];
+            if (i == j)
+                nums[m - 2] *= grid[x + i][y + j];
+            if (i + j == m - 1)
+                nums[m - 1] *= grid[x + i][y + j];
         }
+        if (hTemp > nums[m - 4])
+            nums[m - 4] = hTemp;
+        if (vTemp > nums[m - 3])
+            nums[m - 3] = vTemp;
     }
+    Log("x: " + std::to_string(x) +
+        ", y: " + std::to_string(y) +
+        ", row: " + std::to_string(nums[0]) +
+        ", col: " + std::to_string(nums[1]) +
+        ", f: " + std::to_string(nums[2]) +
+        ", r: " + std::to_string(nums[3]));
+    return *std::max_element(nums.begin(), nums.end());
 }
 
 uint64_t GetLargestSubsetProduct(const int& m, const int& n, const std::string& array)
 {
     Grid grid = GetGrid(n, array);
-//    std::vector<uint64_t> primes{2, 3};
-    const int i(6), j(8);
-    uint64_t sum(0), temp(0);
-    for (int i(0); i < n - m; ++i)
+    uint64_t prod(0), temp(0);
+    for (int i(0); i < n - m + 1; ++i)
     {
-        for (int j(0); j < n - m; ++j)
+        for (int j(0); j < n - m + 1; ++j)
         {
-            if ((temp = ProcessSubGrid(grid, i, j, m)) > sum)
-                sum = temp;
+            if ((temp = ProcessSubGrid(grid, i, j, m)) > prod)
+                prod = temp;
         }
     }
-//    size_t pSize(1), cSize(primes.size());
-//    while (cSize != pSize)
-//    {
-//        Log("sum: " + std::to_string(sum) +
-//            ", back: " + std::to_string(primes.back()) +
-//            ", size: " + std::to_string(primes.size()));
-//        sum += primes.back();
-//        GetNextPrime(primes, limit);
-//        pSize = cSize;
-//        cSize = primes.size();
-//    }
-    return sum;
+    return prod;
 }
 
 }  // namespace

@@ -1,6 +1,11 @@
 Corpus Analyser
 ---------------
 
+V 0.4.0
+-------
+- Problems 11, 12 and 13 partial.
+- Added pre build step to update problems.h with all necessary headers.
+
 V 0.3.1
 -------
 - Problems 11 partial.

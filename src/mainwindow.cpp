@@ -7,7 +7,8 @@
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),
-    mXmlReader(QApplication::applicationDirPath().toStdString() + "/../../xml/parameters.xml")
+    mAppPath(QApplication::applicationDirPath().toStdString()),
+    mXmlReader(mAppPath + "/../../xml/parameters.xml")
 {
     ui->setupUi(this);
     auto problems = mXmlReader.GetAvailableProblems();
@@ -46,7 +47,11 @@ void MainWindow::on_mBtnRun_clicked()
             case 11: base.reset(new Problem011(std::stoi(params[0]),
                                                std::stoi(params[1]),
                                                params[2]));
-                    break;
+                     break;
+            case 12: base.reset(new Problem012(std::stoull(params[0]))); break;
+            case 13: base.reset(new Problem013(mAppPath + "/../../" + params[0],
+                                               std::stoi(params[1])));
+                     break;
             default: throw std::string("No other cases yet!");
         }
         ui->mLnResult->setText(QString::number(base->GetResult()));
