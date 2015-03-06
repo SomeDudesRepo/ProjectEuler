@@ -1,6 +1,11 @@
 Corpus Analyser
 ---------------
 
+V 0.4.5
+-------
+- Problems 13 and 14, 15 partial.
+- Added batch script to generate .h and .cpp files for new problem.
+
 V 0.4.0
 -------
 - Problems 11, 12 and 13 partial.

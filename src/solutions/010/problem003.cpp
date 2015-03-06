@@ -10,7 +10,6 @@ namespace
 
 uint64_t CalculateMaxPrimeFactor(const uint64_t& number)
 {
-    Log("Start");
     std::vector<uint64_t> primes(gPrimes, gPrimes + sizeof gPrimes / sizeof gPrimes[0]);
 //    std::vector<uint64_t> primes(ArrayToVector<uint64_t>(gPrimes));
     int n(0);
@@ -23,14 +22,11 @@ uint64_t CalculateMaxPrimeFactor(const uint64_t& number)
         Log("n: " + std::to_string(n) + ", back: " + std::to_string(primes.back()) +
             ", temp: " + std::to_string(temp));
         if (primes.back() == temp)
-        {
-            Log("End");
             return temp;
-        }
+
         while (temp % primes[n] == 0)
-        {
             temp /= primes[n];
-        }
+
         ++n;
     }
     throw std::string("No factors?!?!?!");

@@ -10,10 +10,11 @@ int main(int argc, char *argv[])
     try
     {
         QApplication a(argc, argv);
-        Log("App start");
+        Log("-- App start --");
         MainWindow w;
         w.show();
         result = a.exec();
+        Log("-- App end --");
     }
     catch(const std::string& s)
     {

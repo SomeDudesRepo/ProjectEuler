@@ -114,4 +114,23 @@
 			<parameter>10</parameter>
 		</parameters>
 	</problem>
+	<problem id="14">
+		<description>
+			Finds the longest Collatz sequence up to a limit number N:
+			- If even, n -> n/2
+			- If odd, n -> 3n + 1
+		</description>
+		<parameters count="1">
+			<parameter>999999</parameter>
+		</parameters>
+	</problem>
+	<problem id="15">
+		<description>
+			Finds the number of paths through a square grid of size N travelling 
+			only right or left towards the bottom, right corner.
+		</description>
+		<parameters count="1">
+			<parameter>16</parameter>
+		</parameters>
+	</problem>
 </euler_problems>

@@ -224,3 +224,4 @@ pip-log.txt
 #############
 test_files/
 
+tools/temp.h

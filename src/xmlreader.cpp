@@ -42,7 +42,11 @@ Problems XmlReader::GetAvailableProblems() const
             if (reader.name() == "problem")
             {
                 auto attributes = reader.attributes();
-                problems.push_back(attributes.value("id").toString().toStdString());
+                const Problems::value_type id(attributes.value("id").toString().toStdString());
+                if (std::find(problems.begin(), problems.end(), id) != problems.end())
+                    throw std::string(id + " already added!");
+
+                problems.push_back(id);
             }
         }
     }

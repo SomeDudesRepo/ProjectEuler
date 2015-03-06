@@ -17,5 +17,7 @@
 #include "020/problem011.h" 
 #include "020/problem012.h" 
 #include "020/problem013.h" 
+#include "020/problem014.h" 
+#include "020/problem015.h" 
   
-#endif // PROBLEMS 
+#endif // PROBLEMS_H 
