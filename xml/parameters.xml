@@ -130,7 +130,31 @@
 			only right or left towards the bottom, right corner.
 		</description>
 		<parameters count="1">
-			<parameter>16</parameter>
+			<parameter>20</parameter>
+		</parameters>
+	</problem>
+	<problem id="16">
+		<description>
+			Finds the of the digits of a power of 2.
+		</description>
+		<parameters count="1">
+			<parameter>20</parameter>
+		</parameters>
+	</problem>
+	<problem id="17">
+		<description>
+			Calculates the number of letters used to print natural numbers up to a limit.
+		</description>
+		<parameters count="1">
+			<parameter>1000</parameter>
+		</parameters>
+	</problem>
+	<problem id="18">
+		<description>
+			Calculates the route with the largest sum down a triangle.
+		</description>
+		<parameters count="1">
+			<parameter>files/problem018.txt</parameter>
 		</parameters>
 	</problem>
 </euler_problems>

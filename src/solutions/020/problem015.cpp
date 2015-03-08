@@ -1,34 +1,61 @@
-#include "problem015.h" 
- 
+#include "problem015.h"
+
+#include <algorithm>
+#include <vector>
+
 #include "../../log.h" 
  
 namespace 
 { 
 
-uint64_t Factorial(const int& i, const int& limit)
+std::vector<uint64_t> Factors(int n, int limit)
 {
-    uint64_t fact(1);
-    for (int j(i); j > limit; --j)
-        fact *= j;
-//    Log(std::to_string(i) + "! = " + std::to_string(fact));
-    return fact;
+    std::vector<uint64_t> v(n - limit + 1);
+    std::generate(v.begin(), v.end(), [&]{ return n--; });
+    return v;
 }
 
-uint64_t GetPaths(const int& n, const int& m)
+void Simplify(std::vector<uint64_t>& top, std::vector<uint64_t>& bot)
 {
-    const int n_m(n - m);
-    int limit(n_m >= m ? n_m : m), div(n_m >= m ? m : n_m);
-    return Factorial(n, limit) / Factorial(div, 1);
+    for (auto& b : bot)
+    {
+        for (auto& t : top)
+        {
+            if(t % b != 0)
+                continue;
+//            Log("b: " + std::to_string(b) + ", t: " + std::to_string(t));
+            t /= b;
+            b = 1;
+            break;
+        }
+    }
 }
 
-uint64_t NumberOfPaths(const int& gridSize)
-{ 
-    const int m(gridSize), n(gridSize * 2 - 1);
-    Log("m: " + std::to_string(m) + ", n: " + std::to_string(n));
-//    const uint64_t paths(Factorial(n - 1) / (Factorial(n - m) * Factorial(m - 1)));
-    return GetPaths(n - 1, m - 1);
-} 
+uint64_t RunVectorProduct(const std::vector<uint64_t>& top, const std::vector<uint64_t>& bot)
+{
+    uint64_t t(1), b(1);
+    std::for_each(top.begin(), top.end(), [&t](const uint64_t& n){ t *= n; });
+    std::for_each(bot.begin(), bot.end(), [&b](const uint64_t& n){ b *= n; });
+    Log("Paths: " + std::to_string(t / b));
+    return t / b;
+}
+
+uint64_t Paths(int m)
+{
+    auto vTop = Factors(2 * m - 1, m + 1);
+    auto vBot = Factors(m - 1, 3);
+//    for (auto i : vTop)
+//        Log("Top: " + std::to_string(i));
+//    for (auto i : vBot)
+//        Log("Bottom: " + std::to_string(i));
+    Simplify(vTop, vBot);
+    for (auto i : vTop)
+        Log("Top: " + std::to_string(i));
+    for (auto i : vBot)
+        Log("Bottom: " + std::to_string(i));
+    return RunVectorProduct(vTop, vBot);
+}
  
 }  // namespace 
  
-Problem015::Problem015(const int& gridSize) : BaseRunnable(NumberOfPaths(gridSize)) {}
+Problem015::Problem015(const int& gridSize) : BaseRunnable(Paths(gridSize)) {}

@@ -32,7 +32,10 @@ SOURCES += main.cpp\
     solutions/020/problem013.cpp \
     filelinereader.cpp \
     solutions/020/problem014.cpp \
-    solutions/020/problem015.cpp
+    solutions/020/problem015.cpp \
+    solutions/020/problem016.cpp \
+    solutions/020/problem017.cpp \
+    solutions/020/problem018.cpp
 
 HEADERS  += mainwindow.h \
     log.h \
@@ -55,6 +58,9 @@ HEADERS  += mainwindow.h \
     solutions/020/problem013.h \
     filelinereader.h \
     solutions/020/problem014.h \
-    solutions/020/problem015.h
+    solutions/020/problem015.h \
+    solutions/020/problem016.h \
+    solutions/020/problem017.h \
+    solutions/020/problem018.h
 
 FORMS    += mainwindow.ui
