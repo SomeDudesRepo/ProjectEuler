@@ -146,7 +146,7 @@
 			Calculates the number of letters used to print natural numbers up to a limit.
 		</description>
 		<parameters count="1">
-			<parameter>1000</parameter>
+			<parameter>15</parameter>
 		</parameters>
 	</problem>
 	<problem id="18">
@@ -155,6 +155,33 @@
 		</description>
 		<parameters count="1">
 			<parameter>files/problem018.txt</parameter>
+		</parameters>
+	</problem>
+	<problem id="19">
+		<description>
+			Calculates the number of Sundays falling on the 1st of the month 
+			from the beginning of a year to the end of another.
+		</description>
+		<parameters count="3">
+			<parameter>1</parameter>
+			<parameter>1901</parameter>
+			<parameter>2000</parameter>
+		</parameters>
+	</problem>
+	<problem id="20">
+		<description>
+			Calculate the sum of the digits of the factorial of a natural number.
+		</description>
+		<parameters count="1">
+			<parameter>100</parameter>
+		</parameters>
+	</problem>
+	<problem id="21">
+		<description>
+			Calculate sum of amicable numbers up to a limit.
+		</description>
+		<parameters count="1">
+			<parameter>10000</parameter>
 		</parameters>
 	</problem>
 </euler_problems>

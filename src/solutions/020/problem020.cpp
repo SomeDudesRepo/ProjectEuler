@@ -1,25 +1,23 @@
-#include "problem016.h" 
-
-#include <cstdint>
-#include <string>
-#include <vector>
-
+#include "problem020.h" 
+ 
 #include "../../log.h"
 #include "../../ttmath/ttmath.h"
-
+ 
 namespace 
-{
-
-uint64_t Function() 
+{ 
+ 
+uint64_t AddDigitsOfFactorial(const int& base)
 { 
     using namespace ttmath;
+
     typedef Big<1,64> MyBig;
-    MyBig x = 2;
-    x.PowUInt(1000);
+    MyBig x = base;
+    CGamma<MyBig> cgamma;
+    MyBig f100 = Factorial(x, cgamma);
 
     std::string s;
-    x.ToString(s, 10, false);
-    Log(std::to_string(2) + "^1000! = " + s);
+    f100.ToString(s, 10, false);
+    Log(std::to_string(base) + "! = " + s);
 
     uint64_t count(0);
     for (auto c : s)
@@ -32,8 +30,8 @@ uint64_t Function()
     }
     Log("1,64: " + std::to_string(count));
     return count;
-}
+} 
  
 }  // namespace 
  
-Problem016::Problem016() : BaseRunnable(Function()) {} 
+Problem020::Problem020(const int& base) : BaseRunnable(AddDigitsOfFactorial(base)) {}

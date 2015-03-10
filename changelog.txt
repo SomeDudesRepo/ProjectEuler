@@ -1,6 +1,11 @@
 Corpus Analyser
 ---------------
 
+V 0.6.0
+-------
+- Problems 16, 19, 20, 21.
+- Added TTMath header library to manage big integers.
+
 V 0.5.0
 -------
 - Problems 15, 17, and 18. 16 is pending.

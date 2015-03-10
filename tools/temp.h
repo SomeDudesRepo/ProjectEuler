@@ -22,5 +22,10 @@
 #include "020/problem016.h" 
 #include "020/problem017.h" 
 #include "020/problem018.h" 
+#include "020/problem019.h" 
+#include "020/problem020.h" 
+  
+// Problems in 030 
+#include "030/problem021.h" 
   
 #endif // PROBLEMS_H 

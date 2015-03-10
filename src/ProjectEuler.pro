@@ -35,7 +35,10 @@ SOURCES += main.cpp\
     solutions/020/problem015.cpp \
     solutions/020/problem016.cpp \
     solutions/020/problem017.cpp \
-    solutions/020/problem018.cpp
+    solutions/020/problem018.cpp \
+    solutions/020/problem019.cpp \
+    solutions/020/problem020.cpp \
+    solutions/030/problem021.cpp
 
 HEADERS  += mainwindow.h \
     log.h \
@@ -61,6 +64,25 @@ HEADERS  += mainwindow.h \
     solutions/020/problem015.h \
     solutions/020/problem016.h \
     solutions/020/problem017.h \
-    solutions/020/problem018.h
+    solutions/020/problem018.h \
+    solutions/020/problem019.h \
+    ttmath/ttmath.h \
+    ttmath/ttmathbig.h \
+    ttmath/ttmathdec.h \
+    ttmath/ttmathint.h \
+    ttmath/ttmathmisc.h \
+    ttmath/ttmathobjects.h \
+    ttmath/ttmathparser.h \
+    ttmath/ttmaththreads.h \
+    ttmath/ttmathtypes.h \
+    ttmath/ttmathuint.h \
+    ttmath/ttmathuint_noasm.h \
+    ttmath/ttmathuint_x86.h \
+    ttmath/ttmathuint_x86_64.h \
+    solutions/020/problem020.h \
+    solutions/030/problem021.h
 
 FORMS    += mainwindow.ui
+
+OTHER_FILES += \
+    ttmath/ttmathuint_x86_64_msvc.asm
