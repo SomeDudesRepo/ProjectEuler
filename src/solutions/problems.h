@@ -27,5 +27,6 @@
   
 // Problems in 030 
 #include "030/problem021.h" 
+#include "030/problem022.h" 
   
 #endif // PROBLEMS_H 

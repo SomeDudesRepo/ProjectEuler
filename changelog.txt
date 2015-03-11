@@ -1,6 +1,10 @@
 Corpus Analyser
 ---------------
 
+V 0.7.0
+-------
+- Problems 22.
+
 V 0.6.0
 -------
 - Problems 16, 19, 20, 21.

@@ -10,16 +10,16 @@
 namespace 
 {
 
-uint64_t Function() 
+uint64_t Function(const int& power)
 { 
     using namespace ttmath;
     typedef Big<1,64> MyBig;
     MyBig x = 2;
-    x.PowUInt(1000);
+    x.PowUInt(power);
 
     std::string s;
     x.ToString(s, 10, false);
-    Log(std::to_string(2) + "^1000! = " + s);
+    Log(std::to_string(2) + "^" + std::to_string(power)  + " = " + s);
 
     uint64_t count(0);
     for (auto c : s)
@@ -36,4 +36,4 @@ uint64_t Function()
  
 }  // namespace 
  
-Problem016::Problem016() : BaseRunnable(Function()) {} 
+Problem016::Problem016(const int& power) : BaseRunnable(Function(power)) {}

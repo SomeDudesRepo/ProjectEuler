@@ -184,4 +184,12 @@
 			<parameter>10000</parameter>
 		</parameters>
 	</problem>
+	<problem id="22">
+		<description>
+			Read on website.
+		</description>
+		<parameters count="1">
+			<parameter>files/problem022.txt</parameter>
+		</parameters>
+	</problem>
 </euler_problems>

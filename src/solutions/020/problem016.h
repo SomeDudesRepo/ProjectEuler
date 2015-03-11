@@ -6,7 +6,7 @@
 class Problem016 : public BaseRunnable 
 { 
 public: 
-    Problem016(); 
+    Problem016(const int& power);
 }; 
  
 #endif // PROBLEM016_H 
