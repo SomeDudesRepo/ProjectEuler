@@ -26,6 +26,8 @@ private:
     Ui::MainWindow *ui;
     const std::string mAppPath;
     XmlReader mXmlReader;
+
+    void SetProblemRunning();
 };
 
 #endif // MAINWINDOW_H

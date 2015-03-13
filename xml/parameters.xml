@@ -138,7 +138,7 @@
 			Finds the of the digits of a power of 2.
 		</description>
 		<parameters count="1">
-			<parameter>20</parameter>
+			<parameter>1000</parameter>
 		</parameters>
 	</problem>
 	<problem id="17">
@@ -186,10 +186,18 @@
 	</problem>
 	<problem id="22">
 		<description>
-			Read on website.
+			Read on website: https://projecteuler.net/problem=22
 		</description>
 		<parameters count="1">
 			<parameter>files/problem022.txt</parameter>
+		</parameters>
+	</problem>
+	<problem id="23">
+		<description>
+			Read on website: https://projecteuler.net/problem=23
+		</description>
+		<parameters count="1">
+			<parameter>28123</parameter>
 		</parameters>
 	</problem>
 </euler_problems>

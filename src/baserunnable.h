@@ -8,11 +8,7 @@
 class BaseRunnable
 {
 public:
-    BaseRunnable(const uint64_t& result)
-        :   mResult(result)
-    {
-        Log("Problem start");
-    }
+    BaseRunnable(const uint64_t& result) :   mResult(result) {}
     virtual ~BaseRunnable() { Log("Problem end"); }
     uint64_t GetResult() const { return mResult; }
 

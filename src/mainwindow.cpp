@@ -29,6 +29,7 @@ void MainWindow::on_mBtnRun_clicked()
         const int problem(ui->mCmbProblems->currentText().toInt());
         const Parameters params(mXmlReader.GetProblemParameters(problem));
         std::unique_ptr<BaseRunnable> base;
+        Log("Problem start");
         switch (problem)
         {
             case 1: base.reset(new Problem001(std::stoi(params[0]),
@@ -64,6 +65,7 @@ void MainWindow::on_mBtnRun_clicked()
             case 20: base.reset(new Problem020(std::stoi(params[0]))); break;
             case 21: base.reset(new Problem021(std::stoi(params[0]))); break;
             case 22: base.reset(new Problem022(mAppPath + "/../../" + params[0])); break;
+            case 23: base.reset(new Problem023(std::stoi(params[0]))); break;
             default: throw std::string("No other cases yet!");
         }
         ui->mLnResult->setText(QString::number(base->GetResult()));

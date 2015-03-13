@@ -39,7 +39,9 @@ SOURCES += main.cpp\
     solutions/020/problem019.cpp \
     solutions/020/problem020.cpp \
     solutions/030/problem021.cpp \
-    solutions/030/problem022.cpp
+    solutions/030/problem022.cpp \
+    solutions/030/problem023.cpp \
+    factors.cpp
 
 HEADERS  += mainwindow.h \
     log.h \
@@ -82,7 +84,9 @@ HEADERS  += mainwindow.h \
     ttmath/ttmathuint_x86_64.h \
     solutions/020/problem020.h \
     solutions/030/problem021.h \
-    solutions/030/problem022.h
+    solutions/030/problem022.h \
+    solutions/030/problem023.h \
+    factors.h
 
 FORMS    += mainwindow.ui
 

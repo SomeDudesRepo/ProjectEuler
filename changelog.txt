@@ -1,6 +1,10 @@
 Corpus Analyser
 ---------------
 
+V 0.7.5
+-------
+- Problems 23, very slow.
+
 V 0.7.0
 -------
 - Problems 22.

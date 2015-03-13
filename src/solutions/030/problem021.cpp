@@ -2,22 +2,11 @@
 
 #include <map>
  
-#include "../../log.h" 
+#include "../../factors.h"
+#include "../../log.h"
  
 namespace 
 { 
-
-uint64_t FactorSum(const uint64_t& n)
-{
-    const uint64_t root(static_cast<uint64_t>(std::sqrt(n)));
-    uint64_t sum(1);
-    for (uint64_t i(2); i <= root; ++i)
-    {
-        if (n % i == 0)
-            sum += i + (i == root && root * root == n ? 0 : (n / i));
-    }
-    return sum;
-}
 
 uint64_t Function(const int& limit)
 { 
@@ -25,7 +14,7 @@ uint64_t Function(const int& limit)
     DFunc dFunc;
     for (uint64_t n(2); n <= limit; ++n)
     {
-        const uint64_t sum(FactorSum(n));
+        const uint64_t sum(ProperDivisorSum(n));
         if (sum == 1)
             continue;
         dFunc[n] = sum;
