@@ -1,6 +1,10 @@
 Corpus Analyser
 ---------------
 
+V 0.7.6
+-------
+- Added a test graph class.
+
 V 0.7.5
 -------
 - Problems 23, very slow.
