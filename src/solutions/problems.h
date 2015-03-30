@@ -29,5 +29,7 @@
 #include "030/problem021.h" 
 #include "030/problem022.h" 
 #include "030/problem023.h" 
+#include "030/problem024.h" 
+#include "030/problem025.h" 
   
 #endif // PROBLEMS_H 

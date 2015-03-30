@@ -66,6 +66,8 @@ void MainWindow::on_mBtnRun_clicked()
             case 21: base.reset(new Problem021(std::stoi(params[0]))); break;
             case 22: base.reset(new Problem022(mAppPath + "/../../" + params[0])); break;
             case 23: base.reset(new Problem023(std::stoi(params[0]))); break;
+            case 24: base.reset(new Problem024(params[0], std::stoi(params[1]))); break;
+            case 25: base.reset(new Problem025(std::stoi(params[0]))); break;
             default: throw std::string("No other cases yet!");
         }
         ui->mLnResult->setText(QString::number(base->GetResult()));

@@ -107,7 +107,8 @@
 	</problem>
 	<problem id="13">
 		<description>
-			Finds the first N digits of the sum of the numbers in the file.
+			Finds the first N lexicographical digits (reading from left to right) 
+			of the sum of the numbers in the file.
 		</description>
 		<parameters count="2">
 			<parameter>files/problem013.txt</parameter>
@@ -135,7 +136,7 @@
 	</problem>
 	<problem id="16">
 		<description>
-			Finds the of the digits of a power of 2.
+			Finds the sum of the digits of a power of 2.
 		</description>
 		<parameters count="1">
 			<parameter>1000</parameter>
@@ -198,6 +199,23 @@
 		</description>
 		<parameters count="1">
 			<parameter>28123</parameter>
+		</parameters>
+	</problem>
+	<problem id="24">
+		<description>
+			Find the nth permutation of a string of n digits
+		</description>
+		<parameters count="2">
+			<parameter>0123456789</parameter>
+			<parameter>1000000</parameter>
+		</parameters>
+	</problem>
+	<problem id="25">
+		<description>
+			Find the first Fibonacci number with at least N digits
+		</description>
+		<parameters count="1">
+			<parameter>3</parameter>
 		</parameters>
 	</problem>
 </euler_problems>

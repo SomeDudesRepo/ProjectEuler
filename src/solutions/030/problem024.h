@@ -6,7 +6,7 @@
 class Problem024 : public BaseRunnable 
 { 
 public: 
-    Problem024(); 
+    Problem024(const std::string& base, const int& nth);
 }; 
  
 #endif // PROBLEM024_H 
